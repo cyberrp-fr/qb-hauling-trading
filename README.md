@@ -49,9 +49,19 @@ This script only works on the QBCore Framework.
 
 1. Place the image files from `assets/*` to **qb-inventory**, to the folder `qb-inventory/html/images/`
 
-2. Now you can place this script folder `qb-hauling-trading` in your **resources** folder
+2. Copy & paste this code in `qb-inventory/server/main.lua` right below this function [here](https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L1353)
+```lua
+local function getTrunkItems(plate)
+	if not Trunks[plate] then return end
 
-3. Make sure that the `qb-hauling-trading` script is started, add `ensure qb-hauling-trading` line to `resources.cfg`.
+	return Trunks[plate].items
+end
+exports('getTrunkItems', getTrunkItems)
+```
+
+3. Now you can place this script folder `qb-hauling-trading` in your **resources** folder
+
+4. Make sure that the `qb-hauling-trading` script is started, add `ensure qb-hauling-trading` line to `resources.cfg`.
 
 At this point you should have it working.
 
