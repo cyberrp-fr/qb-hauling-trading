@@ -1,6 +1,8 @@
 QB Trading - Hauling script
 ===========================
 
+## Showcase video
+https://youtu.be/vbY_RdQt1n8
 
 ## Description
 
